@@ -1,0 +1,7 @@
+{
+  "host"    :"115.68.30.202",
+  "port" : 3306,
+  "user" : "shinwoo",
+  "password" : "me14eda1",
+  "database":"shinwooDB"
+}
