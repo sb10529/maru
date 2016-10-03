@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="/style/style.css" media="screen" title="no title">
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script type="text/javascript">
-      function content_resize(){
+      function content_resize()
+      {
         var height = $('.pixNavigator').height();
         $('.content').css('padding-top',height);
       }
+
       window.addEventListener('load',content_resize)
       window.addEventListener('resize',content_resize)
-      function load_page(pagename){
+
+      function load_page(pagename)
+      {
         $.ajax({
           type : 'GET',
           url : '/loadpage?pagename='+pagename,
