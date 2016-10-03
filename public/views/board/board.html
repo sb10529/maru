@@ -24,6 +24,7 @@
           success : function(data) {
             $('.content').remove();
             $('body').append(data);
+            content_resize();
           },
           error : function (xhr, status, error) {
             alert("통신에러 발생!!")
