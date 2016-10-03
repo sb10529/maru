@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <query>
   <select>
+    <maruSelect>
+      SELECT title, content, creator_ip FROM maru_board WHERE id=%s
+    </maruSelect>
   </select>
-  <insert>
-  </insert>
 </query>
