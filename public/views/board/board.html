@@ -21,13 +21,16 @@
         $.ajax({
           type : 'GET',
           url : '/loadpage?pagename='+pagename,
-          success : function(data) {
+          success : function(data)
+          {
             $('.content').remove();
             $('body').append(data);
             content_resize();
           },
-          error : function (xhr, status, error) {
-            alert("통신에러 발생!!")
+          error : function (xhr, status, error)
+          {
+            alert("통신에러 발생!!");
+
             console.log(xhr);
             console.log(status);
             console.log(error);
