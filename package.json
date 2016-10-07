@@ -12,7 +12,7 @@
 		"url" : ""
 	  }
 	],
-	"name": "Maru Homepage",
+	"name": "maru",
 	"version": "0.0.1",
 	"bin": {
 	  "myapp": "./server.js"
@@ -30,6 +30,7 @@
 	  "xml-digester" : ">=0.0.5",
 	  "connect-busboy" : ">=0.0.2",
 	  "date-utils" : ">=1.2.21",
-	  "ejs" : ">=2.5.2"
+	  "ejs" : ">=2.5.2",
+		"winston" : ">=2.2.0"
 	}
 }

@@ -1,4 +1,4 @@
-module.exports = function(app, fs, connection, util, db_query, formidable)
+module.exports = function(app, fs, connection, util, db_query, formidable,logger)
 {
   app.get('/',function(req,res){
       res.render('views/index.html');
@@ -18,8 +18,8 @@ module.exports = function(app, fs, connection, util, db_query, formidable)
     var url = "views/board/" + pagename + ".html";
 
     console.log("url : " + url);
-    
-    
+
+
     // DB 가져오기
     var query = util.format(db_query.query.select.maruSelect, "1");
 

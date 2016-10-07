@@ -23,6 +23,12 @@ app.use(express.static(__dirname + '/public'));
 app.set('views',__dirname + '/public');
 app.set('view engine','ejs');
 app.engine('html', require('ejs').renderFile);
+//log module
+var Logger = require('./router/logger.js');
+logger = new Logger('../my.log');
+//log module example
+logger.info('This is info');
+logger.error('This is error');
 
 //mysql 관련 소스
 
@@ -51,7 +57,7 @@ fs.readFile(__dirname + '/query/query.xml','utf-8',function(err,data){
     console.log(err);
    } else {
     db_query = result;
-    var router = require('./router/main')(app, fs, connection,util,db_query);
+    var router = require('./router/main')(app, fs, connection,util,db_query,logger);
    }
   });
  }
